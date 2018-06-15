@@ -21,4 +21,9 @@ public final class PipeIterator<S, T> implements Iterator<T> {
   public T next() {
     return func.apply( iter.next() );
   }
+  
+  @ Override
+  public void remove() {
+    iter.remove();
+  }
 }
